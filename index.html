@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>greenCity</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/next/esri/css/main.css"
+    />
+    <script>
+      dojoConfig = {
+        packages: [
+          {
+            name: "greenCity",
+            location: location.pathname.replace(/\/[^/]+$/, "") + "/js",
+          },
+        ],
+        parseOnLoad: false,
+        async: true,
+      };
+    </script>
+
+    <link
+      href="https://fonts.google    <script>
+        const options = {
+            // tell Dojo where to load other packages
+            dojoConfig: {
+                async: true,
+            packages: [
+                {
+                    location: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js',
+                    name: 'Chart'
+                }
+            ]
+            }
+        };
+    </script>apis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Jost&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.15/esri/themes/light/main.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--skrypt do charts.js-->
+    <!--    <script src="js/charts.js"></script>-->
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>-->
+    <!-- load the amCharts base library -->
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <!-- in this case, we only need bar charts, so we'll load the appropriate amCharts script -->
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <!-- load the arcgis-rest-js scripts -->
+    <script src="https://unpkg.com/@esri/arcgis-rest-request"></script>
+    <script src="https://unpkg.com/@esri/arcgis-rest-feature-layer"></script>
+    <!-- optionally load an amcharts theme; cedar provides a calcite theme -->
+    <script src="https://unpkg.com/@esri/cedar/dist/umd/themes/amCharts/calcite.js"></script>
+    <!-- load cedar -->
+    <script src="https://unpkg.com/@esri/cedar/dist/umd/cedar.js"></script>
+    <!-- for pie charts -->
+    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+
+    <script src="https://js.arcgis.com/4.15/"></script>
+
+    <!-- loading the main app-->
+    <script>
+      require(["greenCity/app", "dojo/domReady!"], function (App) {
+        var app = new App();
+        app.init();
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <div class="nav">
+          <a>
+            <!-- href="/"-->
+            <img id="nav-logo" src="img/greenCity_logo.gif" />
+          </a>
+          <div id="mainTitle">Potencjał zielonych dachów</div>
+          <div>
+            <!--                    <ul class="menu" >-->
+            <!--                       <li> <a > Strona Główna </a></li>-->
+            <!--                        <li> <a > O projekcie </a></li>-->
+            <!--                   </ul>-->
+          </div>
+        </div>
+      </div>
+      <div class="mainContainer">
+        <div id="viewDiv"></div>
+        <div class="charts">
+          <div class="chart">
+            <p>
+              <b
+                >Wykres kołowy powierzchni dachów w zależności od
+                przydatności</b
+              >
+            </p>
+            <div id="chartDiv1"></div>
+            <button id="applyUsefulnessRenderer">Przydatność dachów</button>
+          </div>
+          <div class="chart">
+            <p>
+              <b>Wykres kolumnowy ilości dachów w poszczególnych kategoriach</b>
+            </p>
+            <div id="chartDiv2"></div>
+            <button id="applyCategoryRenderer">
+              Kategorie nachylenia dachów
+            </button>
+          </div>
+          <div class="chart">
+            <div id="Filter">
+              <p>Wybierz nachylenie dachów</p>
+              <select id="slopeSelect">
+                <option value="1=1">Wszystkie</option>
+                <option value="area_sl0_5">od 0 do 5</option>
+                <option value="area_sl5_1">od 5 do 10</option>
+                <option value="area_sl10_">od 10 do 15</option>
+                <option value="area_sl15_">od 15 do 35</option>
+                <option value="area_sl_35">powyżej 35</option>
+              </select>
+            </div>
+            <p><b>Dachy o największej powierzchni: </b></p>
+
+            <button id="applyAreaRenderer">Kategoria 1</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

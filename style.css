@@ -1,0 +1,101 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 6%;
+    background: white;
+    box-shadow: 0 3px 7px 0 #DED8D8;
+    z-index: 9999;
+    margin: 0;
+}
+div.nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 6px 5px 5px rgba(185,185,185,0.44);
+    height: 30px;
+}
+
+#nav-logo {
+    margin-top:0;
+    margin-left: 2vh;
+    height: 5vh;
+
+}
+#mainTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.5em;
+    text-shadow: 6px 5px 5px rgba(185,185,185,0.44);
+}
+
+#mainContainer{
+    display: flex;
+    flex-direction: row;
+
+}
+#viewDiv {
+    width: calc(100% - 370px);
+    height: 94.5vh;
+    margin: 0;
+}
+.charts {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 340px;
+    position: absolute;
+    display: flex; 
+    flex-flow: column nowrap;
+    justify-content: space-evenly; 
+}
+
+
+#chartDiv1, #chartDiv2 {
+    height: 130px;
+
+}
+#Filter {
+    display: flex;
+    align-items: baseline;
+    width: auto;
+
+}
+#slopeSelect {
+    display: inline-block;
+    margin: 0 auto;
+    height: 20px;
+    width: auto;
+}
+
+p {
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Jost', sans-serif;
+}
+button {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    font-family: "Avenir Next W00","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 0.4em;
+    cursor: pointer;
+    background-color: #555555;
+    color: white;
+    border-radius: 1px;
+    align-items: space-between;
+}
+
+button:hover {
+    background-color: white;
+    color: #555;
+}
+

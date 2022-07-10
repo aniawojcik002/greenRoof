@@ -5,6 +5,7 @@ It's not perfect and it's not showing my current skills.
 
 
 
+![image](https://user-images.githubusercontent.com/51410315/178148123-d4dff08c-0e09-4a4d-9bb3-cfd2eb8237f0.png)
 
 
 -----------------------------------------

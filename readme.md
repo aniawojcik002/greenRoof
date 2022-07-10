@@ -1,7 +1,7 @@
 Hi.
 GreenCity - It is visualization of potencial of green roof in Cracow.  
 Project done whole by me in 2020 during master studies: Geoinformatics, Photogrammetry and Remote Sensing.
-It's not perfect and it's not showing my skills now. 
+It's not perfect and it's not showing my current skills. 
 
 
 
